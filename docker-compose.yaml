@@ -7,7 +7,7 @@ services:
       MYSQL_ROOT_PASSWORD: database
       MYSQL_DATABASE: spit-api
     ports:
-      - "3307:3306"
+      - "3306:3306"
   app:
     image: openjdk:17-jdk-slim
     container_name: spit-api
