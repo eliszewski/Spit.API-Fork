@@ -1,6 +1,6 @@
 version: '3'
 services:
-  mysql:
+  db:
     image: mysql
     container_name: spit-db
     environment:
@@ -13,6 +13,12 @@ services:
     container_name: spit-api
     ports:
       - "8080:8080"
+    environment:
+      SPRING_DATASOURCE_URL: jdbc:mysql://db:3306/spit-db
+      SPRING_DATASOURCE_USERNAME: root
+      SPRING_DATASOURCE_PASSWORD: database
+    depends_on:
+      - db
     volumes:
       - ./target:/Spit.API
     working_dir: /Spit.API
