@@ -1,24 +1,24 @@
 version: '3'
 services:
-  db:
-    image: mysql
-    container_name: spit-db
-    environment:
-      MYSQL_ROOT_PASSWORD: database
-      MYSQL_DATABASE: spit-api
-    ports:
-      - "3306:3306"
+#  db:
+#    image: mysql
+#    container_name: spit-db
+#    environment:
+#      MYSQL_ROOT_PASSWORD: database
+#      MYSQL_DATABASE: spit-api
+#    ports:
+#      - "3306:3306"
   app:
     image: openjdk:17-jdk-slim
     container_name: spit-api
     ports:
       - "8080:8080"
-    environment:
-      SPRING_DATASOURCE_URL: jdbc:mysql://db:3306/spit-db
-      SPRING_DATASOURCE_USERNAME: root
-      SPRING_DATASOURCE_PASSWORD: database
-    depends_on:
-      - db
+#    environment:
+#      SPRING_DATASOURCE_URL: jdbc:mysql://db:3306/spit-db
+#      SPRING_DATASOURCE_USERNAME: root
+#      SPRING_DATASOURCE_PASSWORD: database
+#    depends_on:
+#      - db
     volumes:
       - ./target:/Spit.API
     working_dir: /Spit.API
