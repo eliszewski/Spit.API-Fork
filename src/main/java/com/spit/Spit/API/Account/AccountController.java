@@ -1,5 +1,6 @@
 package com.spit.Spit.API.Account;
 
+import io.swagger.annotations.Api;
 import jakarta.validation.Valid;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -14,6 +15,7 @@ import java.util.Optional;
 
 @RestController
 @RequestMapping("/account")
+@Api
 public class AccountController {
 
     private final AccountServices accountServices;

@@ -2,6 +2,7 @@ package com.spit.Spit.API.Post;
 
 import com.spit.Spit.API.Account.Account;
 import com.spit.Spit.API.Account.AccountServices;
+import io.swagger.annotations.Api;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -12,6 +13,7 @@ import java.util.Optional;
 
 @RestController
 @RequestMapping("/post")
+@Api
 public class PostController {
 
     private final PostServices postServices;

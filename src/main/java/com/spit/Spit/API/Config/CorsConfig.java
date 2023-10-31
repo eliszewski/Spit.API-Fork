@@ -1,4 +1,4 @@
-package com.spit.Spit.API;
+package com.spit.Spit.API.Config;
 
 import org.springframework.context.annotation.Configuration;
 import org.springframework.web.servlet.config.annotation.CorsRegistry;
